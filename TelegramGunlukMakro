@@ -1,0 +1,109 @@
+' Telegram'da tuttuğum günlüğü Word'de temize çekmek için yazdığım makro.
+
+Sub trh()
+'
+' trh Makro
+' 
+'
+    
+    Dim s As String
+    s = "Pazartesi,Salı,Çarşamba,Perşembe,Cuma,Cumartesi,Pazar"
+    
+    Dim gunIsimleri() As String
+    gunIsimleri = Split(s, ",")
+    
+    s = "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday"
+    
+    Dim gunlerIng() As String
+    gunlerIng = Split(s, ",")
+    Dim i As Integer
+    i = 0
+    
+    Dim aylar                   'Create a variable
+    Set aylar = CreateObject("Scripting.Dictionary")
+    aylar.Add "December", "Aralık"
+    aylar.Add "January", "Ocak"
+    aylar.Add "February", "Şubat"
+    aylar.Add "March", "Mart"
+    aylar.Add "April", "Nisan"
+    aylar.Add "May", "Mayıs"
+    aylar.Add "June", "Haziran"
+    aylar.Add "July", "Temmuz"
+    aylar.Add "August", "Ağustos"
+    aylar.Add "September", "Eylül"
+    aylar.Add "October", "Ekim"
+    aylar.Add "November", "Kasım"
+    
+    MsgBox aylar("December")
+    
+    Dim ay As String
+    ay = "January"
+    
+    For Each gun In gunlerIng
+        Selection.Find.ClearFormatting
+        Selection.Find.Replacement.ClearFormatting
+        With Selection.Find
+            
+            .Text = "---^s(" + gun + "), (" + ay + ") ([0-9]@), (2019)^s---"
+            .Replacement.Text = "\3 " + aylar(ay) + " \4 " + gunIsimleri(i)
+            .Forward = True
+            .Wrap = wdFindContinue
+            .Format = False
+            .MatchCase = False
+            .MatchWholeWord = False
+            .MatchAllWordForms = False
+            .MatchSoundsLike = False
+            .MatchWildcards = True
+        End With
+        Selection.Find.Execute Replace:=wdReplaceAll
+        i = i + 1
+    Next gun
+     
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+        With Selection.Find
+            .Text = "edited ^p"
+            .Replacement.Text = ""
+            .Forward = True
+            .Wrap = wdFindContinue
+            .Format = False
+            .MatchCase = False
+            .MatchWholeWord = False
+            .MatchAllWordForms = False
+            .MatchSoundsLike = False
+            .MatchWildcards = False
+        End With
+        Selection.Find.Execute Replace:=wdReplaceAll
+    
+        Selection.Find.ClearFormatting
+        Selection.Find.Replacement.ClearFormatting
+        With Selection.Find
+            .Text = "^g"
+            .Replacement.Text = ""
+            .Forward = True
+            .Wrap = wdFindContinue
+            .Format = False
+            .MatchCase = False
+            .MatchWholeWord = False
+            .MatchAllWordForms = False
+            .MatchSoundsLike = False
+            .MatchWildcards = False
+        End With
+        Selection.Find.Execute Replace:=wdReplaceAll
+        
+        Selection.Find.ClearFormatting
+        Selection.Find.Replacement.ClearFormatting
+        With Selection.Find
+            .Text = "Melih Çelenk:admin"
+            .Replacement.Text = ""
+            .Forward = True
+            .Wrap = wdFindContinue
+            .Format = False
+            .MatchCase = False
+            .MatchWholeWord = False
+            .MatchAllWordForms = False
+            .MatchSoundsLike = False
+            .MatchWildcards = False
+        End With
+        Selection.Find.Execute Replace:=wdReplaceAll
+End Sub

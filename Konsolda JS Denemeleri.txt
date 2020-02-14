@@ -1,0 +1,48 @@
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function dersEkle() {
+  document.getElementById('secmeli-ders-ekle-15088815').click();
+  await sleep(2000);
+  document.getElementById('secmeli-ders-616441').click();
+  await sleep(2000);
+  document.getElementById('cakisma-modal-2').click();
+  await sleep(2000);
+  $("button:contains('Tamam')").click();
+}
+
+while(true){
+   dersEkle();
+   await sleep(20000);
+}
+
+_________________________
+
+document.getElementById('userName').value = "admin";
+document.getElementById('pcPassword').value = "admin";
+document.getElementById("loginBtn").click();
+
+$(document).ready(function(){
+document.forms[0].dhcpserver[0].checked = true;
+document.getElementsByName("Save")[0].click();
+});
+
+
+$("span:contains('DHCP Settings')").click();
+
+window.onload = function() {
+setTagStr(document,'ntw_lan_dhcp_server');LoadHelp('LanDhcpServerHelpRpm.htm'); resize(this);
+
+document.forms[0].dhcpserver[0].checked = true;
+document.getElementsByName("Save")[0].click();
+};
+
+JQUERY DAHİL ETME:
+
+var jQueryScript = document.createElement('script'); jQueryScript.setAttribute('src','https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'); document.head.appendChild(jQueryScript);
+
+YENİ PENCERE AÇMA:
+var myWindow = window.open("", "MsgWindow", "width=200, height=100");
+myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+

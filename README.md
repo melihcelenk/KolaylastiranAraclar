@@ -1,6 +1,9 @@
 # Basit-Planlama-Araclari
 Zamanı verimli kullanmak için okuduğum çeşitli kitaplar ve denemelerim sonucu kendi geliştirdiğim metotlar
 
+## ADBConnect.bat
+Android Studio üzerinde ADB ile debug yapmak için Wi-Fi üzerinden hızlı bağlantı sağlayan batch kodu
+
 ## TelegramGunlukMakro:
 Telegram'da tuttuğum günlüğü Word'de temize çekmek için yazdığım makro.
 
@@ -9,3 +12,4 @@ Zinciri kırmama takvimlerinde zincirler kırılabiliyor. Bu takvimde her gün b
 
 ## #TL-WR840N-reset.iim
 Elimdeki TP-LINK modemleri hızlı şekilde konfigüre etmek için iMacros üzerinde oluşturduğum makro
+

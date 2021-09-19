@@ -1,6 +1,9 @@
 # Basit-Planlama-Araclari
 Zamanı verimli kullanmak için okuduğum çeşitli kitaplar ve denemelerim sonucu kendi geliştirdiğim metotlar
 
+## KayitliAgParolasiBul.bat
+Bilgisayarda giriş yapılmış olan Wi-Fi ağlarından istenenin parolasını getiren batch kodu
+
 ## ADBConnect.bat
 Android Studio üzerinde ADB ile debug yapmak için Wi-Fi üzerinden hızlı bağlantı sağlayan batch kodu
 

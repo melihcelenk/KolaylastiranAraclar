@@ -1,5 +1,5 @@
 # Basit-Planlama-Araclari
-Zamanı verimli kullanmak için okuduğum çeşitli kitaplar ve denemelerim sonucu kendi geliştirdiğim metotlar
+Zamanı verimli kullanmak için okuduğum çeşitli kitaplar ve denemelerim sonucu kendi geliştirdiğim metotlar ve yazdığım scriptleri içerir
 
 ## KayitliAgParolasiBul.bat
 Bilgisayarda giriş yapılmış olan Wi-Fi ağlarından istenenin parolasını getiren batch kodu

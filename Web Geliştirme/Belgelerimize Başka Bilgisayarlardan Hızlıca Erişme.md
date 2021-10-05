@@ -15,34 +15,34 @@ Bir de dosyaları yükleyeceğimiz bir alt dizine:
 <quote>websiteniz.com/belgeler/yuklenenler</quote>
 
 
-<size=150>index.html</size>
+## index.html
 
-<code>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Melih Çelenk - Belgeler</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <center>
-            <h1>Melih Çelenk - Belgeler</h1>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-              Dosya yüklemek için tıkla:
-              <input type="file" name="fileToUpload" id="fileToUpload">
-              <input type="submit" value="Upload Image" name="submit">
-            </form>
-            
-            <a href="http://websiteniz.com/belgeler/yuklenenler/"><h1>Dosyalar</h1></a>
-        </center>
-    
-    </body>
-</html>
-</code>
+```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Melih Çelenk - Belgeler</title>
+            <meta charset="utf-8">
+        </head>
+        <body>
+            <center>
+                <h1>Melih Çelenk - Belgeler</h1>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                  Dosya yüklemek için tıkla:
+                  <input type="file" name="fileToUpload" id="fileToUpload">
+                  <input type="submit" value="Upload Image" name="submit">
+                </form>
 
-<size=150>upload.php</size>
+                <a href="http://websiteniz.com/belgeler/yuklenenler/"><h1>Dosyalar</h1></a>
+            </center>
 
-<code>
+        </body>
+    </html>
+```
+
+## upload.php
+
+```html
 <?php
 $target_dir = "yuklenenler/";
 $target_file = $target_dir . basename($_FILES<"fileToUpload"><"name">);
@@ -77,4 +77,4 @@ if ($uploadOk == 0) {
   }
 }
 ?>
-</code>
+```

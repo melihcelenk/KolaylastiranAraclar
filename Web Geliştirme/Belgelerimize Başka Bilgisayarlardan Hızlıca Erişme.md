@@ -9,14 +9,18 @@ Sunucunuzda bir klasör oluşturun.
 <b>Önemli Not:</b> Belgeler klasörünün izinlerini dışardan yazılabilir şekilde değiştirin.
 
 Şimdi sadece iki dosyaya ihtiyacımız var.
-<quote>
-websiteniz.com/belgeler/index.html
-    
-websiteniz.com/belgeler/upload.php
-</quote>
 
-Bir de dosyaları yükleyeceğimiz bir alt dizine:
-<quote>websiteniz.com/belgeler/yuklenenler</quote>
+<code>
+websiteniz.com/belgeler/index.html
+</code>
+<br>
+<code>
+websiteniz.com/belgeler/upload.php
+</code>
+<br><br>
+
+Bir de dosyaları yükleyeceğimiz bir alt dizine:<br>
+<code>websiteniz.com/belgeler/yuklenenler</code>
 
 
 ## index.html

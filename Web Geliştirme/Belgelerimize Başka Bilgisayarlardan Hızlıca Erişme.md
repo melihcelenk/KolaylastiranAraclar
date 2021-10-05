@@ -5,6 +5,7 @@ Herhangi bir bilgisayardan hızlı bir şekilde dosyalarınıza erişmek için D
 
 Sunucunuzda bir klasör oluşturun.
 <quote>public_html/belgeler</quote>
+
 <b>Önemli Not:</b> Belgeler klasörünün izinlerini dışardan yazılabilir şekilde değiştirin.
 
 Şimdi sadece iki dosyaya ihtiyacımız var.
